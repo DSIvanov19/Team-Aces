@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+        function alertForm(){
+        var adress =  document.getElementById("adress").value;
+        var type = document.getElementById("type").value;
+        var team = document.getElementById("team").value;
+        var car = document.getElementById("cars").value;
+
+        alert("Sending units to this location: " + adress);
+        alert("Type of accident: " + type);
+        alert("Sending this team: " + team);
+        alert("Vehicle chosen: " + car);
+        }
+        </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +31,7 @@
             <ul>
                 <li><a href="index.html">Към главната страница</a></li>
                 <li><a href="infoTree.html">Информация</a></li>
-                <li><a href="#">Карти</a></li>
+                <li><a href="maps.html">Карти</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </nav>
@@ -36,20 +50,20 @@
             <label for="team">Екип
             </label>
             <select id="team" name="team">
-            <option value="fuel">Екипаж за гориво</option>
-            <option value="engine">Двигателен екипаж</option>
-            <option value="handowrk">Ръчен екипаж</option>
-            <option value="heli">Хеликоптерен екипаж</option>
+            <option value="fuelCrew">Екип за гориво</option>
+            <option value="engineCrew">Двигателен екип</option>
+            <option value="handworkCrew">Ръчен екип</option>
+            <option value="helicopterCrew">Хеликоптерен екип</option>
             </select><br><br>
             <label for="cars">Автомобил
             </label>
             <select id="cars" name="cars">
-            <option value="fire">Пожарна кола</option>
-            <option value="pump">Пожарна кола с водна помпа</option>
-            <option value="modern">Модерна пожарна кола</option>
+            <option value="fireTruck">Пожарна кола</option>
+            <option value="pumpTruck">Пожарна кола с водна помпа</option>
+            <option value="modernTruck">Модерна пожарна кола</option>
             </select><br>
             <br>
-            <input type="submit" value="Submit"><br>
+            <button onclick="alertForm()" id="cl1">Submit</button><br>
           </form><br>
           <p>Основната ни цел е да ви помогнем колкото се може по-бързо!</p>
           <p>Запазете спокойствие докато нашите екипи идват към Вас.</p>
